@@ -160,7 +160,29 @@ class MainMenuState extends MusicBeatState
 		virtualPad.y = -44;
 		#end
 
-		super.create();
+		super.create(); 
+		
+		switch (FlxG.random.int(1, 2)) 
+		{
+        case 1:
+	               char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/BOYFRIEND'));
+                   char.frames = Paths.getSparrowAtlas('mainmenu/BOYFRIEND');
+                   char.animation.addByPrefix('idleB', 'BF idle dance', 24, true);
+                   char.animation.play('idleB');
+                   char.scrollFactor.set();
+                   char.antialiasing = ClientPrefs.globalAntialiasing;
+                   add(char);
+	
+	     case 2:
+	               char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/GF_assets'));
+                   char.frames = Paths.getSparrowAtlas('mainmenu/GF_assets');
+                   char.animation.addByPrefix('idleG', 'GF Cheer', 24, true);
+                   char.animation.play('idleG');
+                   char.scrollFactor.set();
+                   char.antialiasing = ClientPrefs.globalAntialiasing;
+                   add(char);
+            }
+    
 	}
 	
 	#if ACHIEVEMENTS_ALLOWED
@@ -172,28 +194,6 @@ class MainMenuState extends MusicBeatState
 	}
 	#end
 	
-	switch (FlxG.random.int(1, 2))
-	        {
-	               case 1:
-	               char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/BOYFRIEND'));
-                   char.frames = Paths.getSparrowAtlas('mainmenu/BOYFRIEND');
-                   char.animation.addByPrefix('idleB', 'BF idle dance', 24, true);
-                   char.animation.play('idleB');
-                   char.scrollFactor.set();
-                   char.antialiasing = ClientPrefs.globalAntialiasing;
-                   add(char);
-	
-	               case 2:
-	               char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/GF_assets'));
-                   char.frames = Paths.getSparrowAtlas('mainmenu/GF_assets');
-                   char.animation.addByPrefix('idleG', 'GF Cheer', 24, true);
-                   char.animation.play('idleG');
-                   char.scrollFactor.set();
-                   char.antialiasing = ClientPrefs.globalAntialiasing;
-                   add(char);
-	
-    }
-
 	var selectedSomethin:Bool = false;
 
 	override function update(elapsed:Float)
