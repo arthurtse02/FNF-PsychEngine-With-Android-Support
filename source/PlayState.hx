@@ -220,6 +220,8 @@ class PlayState extends MusicBeatState
 
 	var phillyGlowGradient:PhillyGlow.PhillyGlowGradient;
 	var phillyGlowParticles:FlxTypedGroup<PhillyGlow.PhillyGlowParticle>;
+	
+	var charSelection:Int = CharSelectState.curSelected;
 
 	var limoKillingState:Int = 0;
 	var limo:BGSprite;
