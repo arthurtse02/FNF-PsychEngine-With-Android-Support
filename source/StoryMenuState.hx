@@ -42,6 +42,8 @@ class StoryMenuState extends MusicBeatState
 
 	var grpLocks:FlxTypedGroup<FlxSprite>;
 
+    var charSelection:Int = CharSelectState.curSelected;
+
 	var difficultySelectors:FlxGroup;
 	var sprDifficulty:FlxSprite;
 	var leftArrow:FlxSprite;
@@ -322,7 +324,7 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignMisses = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
+				LoadingState.loadAndSwitchState(new CharSelectState(), true);
 				FreeplayState.destroyFreeplayVocals();
 			});
 		} else {

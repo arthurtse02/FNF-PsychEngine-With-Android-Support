@@ -40,6 +40,8 @@ class FreeplayState extends MusicBeatState
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
+	
+	var
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
@@ -398,7 +400,7 @@ class FreeplayState extends MusicBeatState
 			if (FlxG.keys.pressed.SHIFT #if android || virtualPad.buttonZ.pressed #end){
 				LoadingState.loadAndSwitchState(new ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new PlayState());
+				LoadingState.loadAndSwitchState(new CharSelectState());
 			}
 
 			FlxG.sound.music.volume = 0;
