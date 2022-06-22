@@ -197,8 +197,8 @@
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		255,
-		255
+        20,
+        147
 	],
 	"camera_position": [
 		0,

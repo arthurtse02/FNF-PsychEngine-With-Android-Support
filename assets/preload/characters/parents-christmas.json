@@ -253,9 +253,9 @@
 	"healthicon": "parents",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		0,
-		255
+		196,
+		94,
+		174
 	],
 	"camera_position": [
 		0,
