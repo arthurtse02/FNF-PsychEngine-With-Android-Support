@@ -940,7 +940,14 @@ class PlayState extends MusicBeatState
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
 
-		boyfriend = new Boyfriend(0, 0, SONG.player1);
+		switch(charSelection){
+		case 0:
+        boyfriend = newBoyfriend(0, 0, 'bf');
+        case 1:
+        boyfriend = newBoyfriend(0, 0, 'bf-christmas');
+        default:
+        }
+        boyfriend = newBoyfriend(0, 0, 'bf');
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
@@ -1021,7 +1028,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF0000FF, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFFFFFFFF, 0xFF0000FF);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
