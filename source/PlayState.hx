@@ -944,12 +944,12 @@ class PlayState extends MusicBeatState
 
 		switch(charSelection){
 		case 0:
-        boyfriend = newBoyfriend(0, 0, 'bf');
+        boyfriend = new Boyfriend(0, 0, 'bf');
         case 1:
-        boyfriend = newBoyfriend(0, 0, 'bf-christmas');
+        boyfriend = new Boyfriend(0, 0, 'bf-christmas');
         default:
         }
-        boyfriend = newBoyfriend(0, 0, 'bf');
+        boyfriend = new Boyfriend(0, 0, 'bf');
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
