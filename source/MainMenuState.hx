@@ -47,7 +47,7 @@ class MainMenuState extends MusicBeatState
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	
-	var char:FlxSprite;
+	var char.FlxSprite;
 
 	override function create()
 	{
@@ -163,6 +163,15 @@ class MainMenuState extends MusicBeatState
 		super.create();
 	}
 	
+	#if ACHIEVEMENTS_ALLOWED
+	// Unlocks "Freaky on a Friday Night" achievement
+	function giveAchievement() {
+		add(new AchievementObject('friday_night_play', camAchievement));
+		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		trace('Giving achievement "friday_night_play"');
+	}
+	#end
+	
 	switch (FlxG.random.int(1, 2))
 	        {
 	               case 1:
@@ -184,15 +193,6 @@ class MainMenuState extends MusicBeatState
                    add(char);
 	
     }
-    
-	#if ACHIEVEMENTS_ALLOWED
-	// Unlocks "Freaky on a Friday Night" achievement
-	function giveAchievement() {
-		add(new AchievementObject('friday_night_play', camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "friday_night_play"');
-	}
-	#end
 
 	var selectedSomethin:Bool = false;
 
