@@ -4499,6 +4499,8 @@ class PlayState extends MusicBeatState
 					note.destroy();
 				}
 				return;
+			case 'Dodge Note':
+			health +=0.0;
 			}
 
 			if (!note.isSustainNote)
