@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 		
 		switch (FlxG.random.int(1, 2)) 
 		{
-        case 1:
+           case 1:
 	           char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/julio'));
                    char.frames = Paths.getSparrowAtlas('mainmenu/julio');
 		   char.animation.addByPrefix('idleB', 'BF idle dance', 24, true);
@@ -282,7 +282,7 @@ class MainMenuState extends MusicBeatState
 				}
 			}
 			#if (desktop || android)
-			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || virtualPad.buttonE.justPressed #end)
+			else if (FlxG.keys.anyJustPressed(debugKeys)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
