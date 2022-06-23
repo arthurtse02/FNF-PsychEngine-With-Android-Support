@@ -160,9 +160,9 @@ class MainMenuState extends MusicBeatState
 		switch (FlxG.random.int(1, 2)) 
 		{
         case 1:
-	               char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/BOYFRIEND'));
-                   char.frames = Paths.getSparrowAtlas('mainmenu/BOYFRIEND');
-                   char.animation.addByPrefix('idleB', 'BF idle dance', 24, true);
+	           char = new FlxSprite(790, 200).loadGraphic(Paths.image('mainmenu/julio'));
+                   char.frames = Paths.getSparrowAtlas('mainmenu/julio');
+		   char.animation.addByPrefix('idleB', 'BF idle dance', 24, true);
                    char.animation.play('idleB');
                    char.scrollFactor.set();
                    char.antialiasing = ClientPrefs.globalAntialiasing;
