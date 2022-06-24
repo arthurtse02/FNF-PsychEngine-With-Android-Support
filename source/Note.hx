@@ -151,9 +151,9 @@ class Note extends FlxSprite
 					colorSwap.brightness = 0;
 					lowPriority = true;
 					if(isSustainNote) {
-						missHealth = 9.0;
+						missHealth = 0.4;
 					} else {
-						missHealth = 9.3;
+						missHealth = 0.4;
 					}
 					hitCausesMiss = false;
 				case 'Alt Animation':
