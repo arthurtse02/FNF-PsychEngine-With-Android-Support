@@ -183,7 +183,7 @@
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "dodge left",
+			"anim": "dodgeleft",
 			"loop": false,
 			"name": "BF NOTE LEFT DODGE"
 		},
