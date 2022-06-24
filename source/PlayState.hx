@@ -4527,10 +4527,10 @@ class PlayState extends MusicBeatState
 				}
 				
 				if(note.noteType == 'Dodge Note') {
-					if(boyfriend.animOffsets.exists('dodge left')) {
+					if(boyfriend.animOffsets.exists('dodgeleft')) {
 						boyfriend.playAnim('dodge left', true);
 						boyfriend.specialAnim = true;
-						boyfriend.dodge leftTimer = 0.6;
+						boyfriend.dodgeleftTimer = 0.6;
 					}
 
 					if(dad != null && dad.animOffsets.exists('Shoot')) {
