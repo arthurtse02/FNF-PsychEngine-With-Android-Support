@@ -4528,7 +4528,7 @@ class PlayState extends MusicBeatState
 				
 				if(note.noteType == 'Dodge Note') {
 					if(boyfriend.animOffsets.exists('dodgeleft')) {
-						boyfriend.playAnim('dodge left', true);
+						boyfriend.playAnim('dodgeleft', true);
 						boyfriend.specialAnim = true;
 						boyfriend.heyTimer = 0.6;
 					}
