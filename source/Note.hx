@@ -146,6 +146,7 @@ class Note extends FlxSprite
 					mustPress;
 					reloadNote('dodge');
 					noteSplashTexture = 'noteSplashes';
+					FlxG.sound.play(Paths.sound('Slingshot-_Roblox_-Sound-Effect'));
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
