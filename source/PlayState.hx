@@ -4531,12 +4531,14 @@ class PlayState extends MusicBeatState
 						boyfriend.playAnim('dodgeleft', true);
 						boyfriend.specialAnim = true;
 						boyfriend.heyTimer = 0.6;
+						FlxG.sound.play(Paths.sound('Slingshot-_Roblox_-Sound-Effect'));
 					}
 
 					if(dad != null && dad.animOffsets.exists('Shoot')) {
 						dad.playAnim('Shoot', true);
 						dad.specialAnim = true;
 						dad.heyTimer = 0.6;
+						FlxG.sound.play(Paths.sound('Slingshot-_Roblox_-Sound-Effect'));
 					}
 				}
 
