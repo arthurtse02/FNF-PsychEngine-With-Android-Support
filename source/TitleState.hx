@@ -116,7 +116,7 @@ class TitleState extends MusicBeatState
 		#if CHECK_FOR_UPDATES
 		if(!closedState) {
 			trace('checking for update');
-			//http = new haxe.Http("https://raw.githubusercontent.com/jigsaw-4277821/FNF-PsychEngine-Android-Support/main/gitVersion.txt");
+			var http = new haxe.Http("https://raw.githubusercontent.com/jigsaw-4277821/FNF-PsychEngine-Android-Support/main/gitVersion.txt");
 			http.onData = function (data:String)
 			{
 				updateVersion = data.split('\n')[0].trim();
