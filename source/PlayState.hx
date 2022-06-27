@@ -55,8 +55,6 @@ import flixel.effects.particles.FlxParticle;
 import flixel.util.FlxSave;
 import animateatlas.AtlasFrameMaker;
 import Achievements;
-import MainVariables._variables;
-import ModifierVariables._modifiers;
 import StageData;
 import FunkinLua;
 import DialogueBoxPsych;

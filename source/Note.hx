@@ -7,9 +7,6 @@ import flixel.math.FlxMath;
 import flixel.util.FlxColor;
 import flash.display.BitmapData;
 import editors.ChartingState;
-import ModifierVariables._modifiers;
-import MainVariables._variables;
-
 
 using StringTools;
 
@@ -272,15 +269,6 @@ class Note extends FlxSprite
 						prevNote.animation.play('redhold');
 				}
 				
-				if ((_variables.scroll == "down" || _variables.scroll == "right") && !sustainNote)
-                     flipY = true; 
-
-                if ((_variables.scroll == "left") && !isSustainNote)
-                     angle += 90;
-
-               else if ((_variables.scroll == "right") && !isSustainNote)
-                     angle -= 90;
-
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05;
 				if(PlayState.instance != null)
 				{
