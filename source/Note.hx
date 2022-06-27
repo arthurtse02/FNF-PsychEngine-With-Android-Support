@@ -41,6 +41,8 @@ class Note extends FlxSprite
 
 	public var sustainLength:Float = 0;
 	public var isSustainNote:Bool = false;
+	public var noteVariant:String = '';
+    public var isRoll:Bool = false;
 	public var noteType(default, set):String = null;
 
 	public var eventName:String = '';
@@ -62,6 +64,10 @@ class Note extends FlxSprite
 	public static var GREEN_NOTE:Int = 2;
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
+	public static var canMissLeft:Bool = true;
+    public static var canMissRight:Bool = true;
+    public static var canMissUp:Bool = true;
+    public static var canMissDown:Bool = true;
 
 	// Lua shit
 	public var noteSplashDisabled:Bool = false;
@@ -184,7 +190,7 @@ class Note extends FlxSprite
 		isSustainNote = sustainNote;
 		this.inEditor = inEditor;
 
-		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50;
+		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 95;
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
 		this.strumTime = strumTime;
@@ -262,6 +268,15 @@ class Note extends FlxSprite
 					case 3:
 						prevNote.animation.play('redhold');
 				}
+				
+				if ((_variables.scroll == "down" || _variables.scroll == "right") && !sustainNote)
+                     flipY = true; 
+
+                if ((_variables.scroll == "left") && !isSustainNote)
+                     angle += 90;
+
+               else if ((_variables.scroll == "right") && !isSustainNote)
+                     angle -= 90;
 
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05;
 				if(PlayState.instance != null)

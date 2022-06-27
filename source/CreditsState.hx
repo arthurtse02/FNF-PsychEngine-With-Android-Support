@@ -85,7 +85,7 @@ class CreditsState extends MusicBeatState
 			['Julio',	'jcgbr16',				'Dono do Mod',	'https://www.youtube.com/channel/UCdZoVGVcMI2_FQdYjx2S1_A', 	'FF0000'],
 			['Tiago',				'tiago',			'Tester e Participou da Week 3',										'https://www.youtube.com/c/TiagoFigueiredoGameplays/featured', 	'FFD700'],
 			['The Mongo e Drongo',	'TMD',			'Ajuda com sprites',											'https://gamebanana.com/mods/313457', 								'A0522D'],
-			['ArthurGames585,	'arthur',			'Programmer',											'crash', 								'00008B'],
+			['ArthurGames585',	'arthur',			'Programmer',											'crash', 								'00008B'],
 			[''],
 			['Android Support'],
 			['Saw (M.A. Jigsaw)',	'saw',				'Main Programmer of Psych Engine\nWith Android Support',	'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 	'444444'],
