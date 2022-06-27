@@ -81,6 +81,12 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+		    ['Friday Night Toons Team'],
+			['Julio',	'jcgbr16',				'Dono do Mod',	'https://www.youtube.com/channel/UCdZoVGVcMI2_FQdYjx2S1_A', 	'FF0000'],
+			['Tiago',				'tiago',			'Tester e Participou da Week 3',										'https://www.youtube.com/c/TiagoFigueiredoGameplays/featured', 	'FFD700'],
+			['The Mongo e Drongo',	'TMD',			'Ajuda com sprites',											'https://gamebanana.com/mods/313457', 								'A0522D'],
+			['ArthurGames585,	'arthur',			'Programmer',											'crash', 								'00008B'],
+			[''],
 			['Android Support'],
 			['Saw (M.A. Jigsaw)',	'saw',				'Main Programmer of Psych Engine\nWith Android Support',	'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 	'444444'],
 			['Goldie',				'goldie',			'Virtual Pad Artist',										'https://www.youtube.com/channel/UCjTi9Hfl1Eb5Bgk5gksmsbA', 	'444444'],
