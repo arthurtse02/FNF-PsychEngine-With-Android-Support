@@ -3187,7 +3187,9 @@ class PlayState extends MusicBeatState
 		callOnLuas('onUpdatePost', [elapsed]);
 	}
 	
-	persistentUpdate = false;
+	function openPauseMenu()
+	{
+	            persistentUpdate = false;
 				persistentDraw = true;
 				paused = true;
 
@@ -4814,8 +4816,8 @@ class PlayState extends MusicBeatState
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 		}
 		#if hscript
-        FunkinLua.haxeInterp = null;
-        #end
+		FunkinLua.haxeInterp = null;
+		#end
 		super.destroy();
 	}
 
